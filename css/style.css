@@ -1,0 +1,20 @@
+/*author:l245t
+ *type:buttons
+ *detail:default buttons style
+ *others:
+ */
+#button {
+    background: #4b8dff;
+    border: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+}
