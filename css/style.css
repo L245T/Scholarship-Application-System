@@ -16,3 +16,14 @@
     line-height: 40px;
     text-decoration: none;
 }
+
+/* input */
+#input{
+    background-color: #f7f7f7;
+    outline-style:none;
+    border: 1px solid #ccc;
+    padding:7px;
+    width: 160px;
+    font-size: 14px;
+    font-family: 等线;
+}
