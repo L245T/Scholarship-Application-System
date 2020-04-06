@@ -1,20 +1,105 @@
 /* button */
-
 /* default button style */
-#button {
-    background: #4b8dff;
-    border: 0;
-    padding-left: 25px;
-    padding-right: 25px;
-    height: 40px;
+.button {
+    background: #8bf;
+    border: 1px solid #48f;
+    padding-left: 18px;
+    padding-right: 18px;
+    height: 35px;
     display: inline-block;
     border-radius: 30px;
     color: #fff;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
-    line-height: 40px;
+    line-height: 35px;
     text-decoration: none;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+/* button on hovering */
+.btn:hover {
+    background-color: #48f;
+}
+
+/* button longer */
+.btn-long {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* button height shorter */
+.btn-short {
+    height: 26px;
+    font-size: 17px;
+    line-height: 26px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+/* small button */
+.btn-small {
+    padding-left: 14px;
+    padding-right: 14px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+/* big button */
+.btn-big {
+    padding-left: 22px;
+    padding-right: 22px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+/* button with color */
+/* button darker than default */
+.btn-dark {
+    background-color: #259;
+}
+
+/* button red */
+.btn-red {
+    background-color: #f66;
+    border: 1px solid #c33;
+    color: #fee;
+}
+
+/* red button on hovering */
+.btn-red:hover {
+    background-color: #fdd;
+    color: #c33;
+}
+
+/* button green */
+.btn-green {
+    background-color: #393;
+    border: 1px solid #063;
+}
+
+/* green button on hovering */
+.btn-green:hover{
+    background-color: #bca;
+    color: #060;
+}
+
+/* button gray */
+.btn-gray {
+    background-color: #666;
+    color: #eee;
+    border: 1px solid #555;
+    cursor: not-allowed;
+}
+
+/* gray button on hovering */
+.btn-gray:hover {
+    background-color: #666;
+    color: #eee;
 }
 
 /* input */
