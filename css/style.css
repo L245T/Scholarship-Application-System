@@ -110,13 +110,11 @@
     padding:11px;
     width: 160px;
     font-size: 18px;
-    font-family: 等线;
 }
 
 /* option */
 option{
     font-size: 18px;
-    font-family: 等线;
 }
 
 /* select */
@@ -124,6 +122,5 @@ select{
     padding: 11px;
     width: 160px;
     font-size: 18px;
-    font-family: 等线;
     background-color: #f7f7f7
 }
