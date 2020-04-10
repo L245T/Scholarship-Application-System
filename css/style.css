@@ -103,7 +103,7 @@
 }
 
 /* input */
-#input{
+.input{
     background-color: #f7f7f7;
     outline-style:none;
     border: 1px solid #ccc;
@@ -113,14 +113,22 @@
 }
 
 /* option */
-option{
+.option{
     font-size: 18px;
 }
 
 /* select */
-select{
+.select{
     padding: 11px;
     width: 160px;
     font-size: 18px;
     background-color: #f7f7f7
 }
+
+.center-in-center {
+    transform: translate(-50%, -60%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
