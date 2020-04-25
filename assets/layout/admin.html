@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>管理端 | 奖学金申报系统</title>
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--头信息&工具栏-->
+<div class="mdui-appbar">
+    <div class="mdui-toolbar mdui-color-blue-900">
+        <a href="admin.html" class="mdui-typo-headline">xx大学</a>
+        <a href="admin.html" class="mdui-typo-title">管理端</a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--登出按钮-->
+        <a href="logout.html" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">退出登录</a>
+    </div>
+    <!--工具栏-->
+    <div class="mdui-tab mdui-tab-centered mdui-color-blue-900" mdui-tab>
+        <a href="#add-notice" class="mdui-ripple mdui-ripple-white">公告发布</a>
+        <a href="#user-add" class="mdui-ripple mdui-ripple-white">增加用户</a>
+        <a href="#user-del" class="mdui-ripple mdui-ripple-white">删除用户</a>
+        <a href="#class-add-del" class="mdui-ripple mdui-ripple-white">增加班级学院</a>
+        <a href="#user" class="mdui-ripple mdui-ripple-white">个人中心</a>
+    </div>
+</div>
+
+<!--留白2行-->
+<br/><br/>
+
+<div id="add-notice">
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!--信息展示模块-->
+            <div class="mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-card">
+                    <!--展示登陆者信息-->
+                    <div class="mdui-card-header">
+                        <!--展示照片-->
+                        <img class="mdui-card-header-avatar" src="img/user.jpg"/>
+                        <!--展示姓名-->
+                        <div class="mdui-card-header-title">管理员</div>
+                        <!--展示学号-->
+                        <div class="mdui-card-header-subtitle">UserID</div>
+                    </div>
+                    <!--展示登陆者信息模块到此结束-->
+
+                    <!--增强用户体验模块，展示日期，欢迎词-->
+                    <div class="mdui-card-media">
+                        <!--背景图片早，中晚不同-->
+                        <img src="img/card-background.jpg"/>
+                        <!--文字展示-->
+                        <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <!--问候词-->
+                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
+                                <!--日期-->
+                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--增强体验模块到此结束-->
+
+                    <!--公告模块-->
+                    <div class="mdui-card-primary">
+                        <!--公告标题-->
+                        <div class="mdui-card-primary-title">
+                            公告标题&nbsp;
+                            <a href="oldnotice.html">
+                                <div class="mdui-btn mdui-text-color-black">历史公告</div>
+                            </a>
+                        </div>
+                        <!--公告发布日期-->
+                        <div class="mdui-card-primary-subtitle">本公告由【管理员】发布于X年X月X日</div>
+                    </div>
+
+                    <!--公告内容信息-->
+                    <div class="mdui-card-content">
+                        <p>本次申报截止至A年B月C日，请各位同学抓紧时间填写申报信息，过期将不予补申报！</p>
+                        <!--空白一行，美观-->
+                        <br/>
+                    </div>
+
+                    <!--公告模块到此结束-->
+                </div>
+            </div>
+            <!--信息展示模块到此结束-->
+
+            <div class="mdui-col-sm-8 mdui-col-md-8">
+                <div class="mdui-container">
+                    <div class="mdui-typo">
+                        <h1>公告标题</h1>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">请填写公告标题</label>
+                        <input class="mdui-textfield-input" type="text" maxlength="10"/>
+                    </div>
+                    <div class="mdui-typo">
+                        <h1>公告内容</h1>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">请填写公告内容</label>
+                        <input class="mdui-textfield-input" type="text" maxlength="1000"/>
+                    </div>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">发布</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="user-add">
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!--信息展示模块-->
+            <div class="mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-card">
+                    <!--展示登陆者信息-->
+                    <div class="mdui-card-header">
+                        <!--展示照片-->
+                        <img class="mdui-card-header-avatar" src="img/user.jpg"/>
+                        <!--展示姓名-->
+                        <div class="mdui-card-header-title">管理员</div>
+                        <!--展示学号-->
+                        <div class="mdui-card-header-subtitle">UserID</div>
+                    </div>
+                    <!--展示登陆者信息模块到此结束-->
+
+                    <!--增强用户体验模块，展示日期，欢迎词-->
+                    <div class="mdui-card-media">
+                        <!--背景图片早，中晚不同-->
+                        <img src="img/card-background.jpg"/>
+                        <!--文字展示-->
+                        <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <!--问候词-->
+                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
+                                <!--日期-->
+                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--增强体验模块到此结束-->
+
+                    <!--公告模块-->
+                    <div class="mdui-card-primary">
+                        <!--公告标题-->
+                        <div class="mdui-card-primary-title">
+                            公告标题&nbsp;
+                            <a href="oldnotice.html">
+                                <div class="mdui-btn mdui-text-color-black">历史公告</div>
+                            </a>
+                        </div>
+                        <!--公告发布日期-->
+                        <div class="mdui-card-primary-subtitle">本公告由【管理员】发布于X年X月X日</div>
+                    </div>
+
+                    <!--公告内容信息-->
+                    <div class="mdui-card-content">
+                        <p>本次申报截止至A年B月C日，请各位同学抓紧时间填写申报信息，过期将不予补申报！</p>
+                        <!--空白一行，美观-->
+                        <br/>
+                    </div>
+
+                    <!--公告模块到此结束-->
+                </div>
+            </div>
+            <!--信息展示模块到此结束-->
+
+            <div class="mdui-col-sm-8 mdui-col-md-8">
+                <div class="mdui-container">
+                    <div class="typo">
+                        <h1>用户类型选择</h1>
+                    </div>
+                    <div class="mdui-row-md-5">
+                        <form>
+                            <div class="mdui-col">
+                                <label class="mdui-radio">
+                                    <input type="radio" name="group1"/>
+                                    <i class="mdui-radio-icon"></i>
+                                    学生
+                                </label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio">
+                                    <input type="radio" name="group1"/>
+                                    <i class="mdui-radio-icon"></i>
+                                    班级审核员
+                                </label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio">
+                                    <input type="radio" name="group1"/>
+                                    <i class="mdui-radio-icon"></i>
+                                    学院审核员
+                                </label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio">
+                                    <input type="radio" name="group1"/>
+                                    <i class="mdui-radio-icon"></i>
+                                    学校审核员
+                                </label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio">
+                                    <input type="radio" name="group1"/>
+                                    <i class="mdui-radio-icon"></i>
+                                    管理员
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <br/>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">确认</button>
+                    <!--选择后根据类型弹出-->
+                    <div class="mdui-typo">
+                        <h1>用户信息填写</h1>
+                    </div>
+
+
+                    <div class="mdui-typo"><h5>学生界面</h5></div>
+                    <div class="mdui-row-md-3">
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">姓名</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">学号</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">平均绩点</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <div class="mdui-row-md-3">
+                        <div class="mdui-col">
+                            <div class="mdui-typo-body-2-opacity">请选择学院</div>
+                            <select class="mdui-select" mdui-select>
+                                <option value="1">未选择</option>
+                                <option value="2">学院1</option>
+                                <option value="3">学院2</option>
+                                <option value="4">学院3</option>
+                                <option value="5">学院4</option>
+                            </select>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-typo-body-2-opacity">请选择班级</div>
+                            <select class="mdui-select" mdui-select>
+                                <option value="1">未选择</option>
+                                <option value="2">193181</option>
+                                <option value="3">193182</option>
+                                <option value="4">192181</option>
+                                <option value="5">192182</option>
+                            </select>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-typo-body-2-opacity">性别</div>
+                            <select class="mdui-select" mdui-select>
+                                <option value="1">未选择</option>
+                                <option value="2">男</option>
+                                <option value="3">女</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">请输入用户身份证</label>
+                        <input class="mdui-textfield-input" type="text"/>
+                    </div>
+                    <br/><br/>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">提交</button>
+
+
+                    <div class="mdui-typo"><h5>班级审核员界面</h5></div>
+                    <div class="mdui-row-md-2">
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入姓名</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入用户身份证</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <div class="mdui-row-md-2">
+                        <div class="mdui-col">
+                            <div class="mdui-typo-body-2-opacity">请选择学院</div>
+                            <select class="mdui-select" mdui-select>
+                                <option value="1">未选择</option>
+                                <option value="2">学院1</option>
+                                <option value="3">学院2</option>
+                                <option value="4">学院3</option>
+                                <option value="5">学院4</option>
+                            </select>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-typo-body-2-opacity">请选择班级</div>
+                            <select class="mdui-select" mdui-select>
+                                <option value="1">未选择</option>
+                                <option value="2">193181</option>
+                                <option value="3">193182</option>
+                                <option value="4">192181</option>
+                                <option value="5">192182</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">提交</button>
+
+                    <div class="mdui-typo"><h5>学院审核员界面</h5></div>
+                    <div class="mdui-row-md-2">
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入姓名</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入用户身份证</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <div class="mdui-typo-body-2-opacity">请选择学院</div>
+                    <select class="mdui-select" mdui-select>
+                        <option value="1">未选择</option>
+                        <option value="2">学院1</option>
+                        <option value="3">学院2</option>
+                        <option value="4">学院3</option>
+                        <option value="5">学院4</option>
+                    </select>
+                    <br/><br/>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">提交</button>
+
+
+                    <div class="mdui-typo"><h5>学校审核员界面</h5></div>
+                    <div class="mdui-row-md-2">
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入姓名</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入用户身份证</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">提交</button>
+
+
+                    <div class="mdui-typo"><h5>管理员界面</h5></div>
+                    <div class="mdui-row-md-2">
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入姓名</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入用户身份证</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">提交</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="user-del">
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!--信息展示模块-->
+            <div class="mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-card">
+                    <!--展示登陆者信息-->
+                    <div class="mdui-card-header">
+                        <!--展示照片-->
+                        <img class="mdui-card-header-avatar" src="img/user.jpg"/>
+                        <!--展示姓名-->
+                        <div class="mdui-card-header-title">管理员</div>
+                        <!--展示学号-->
+                        <div class="mdui-card-header-subtitle">UserID</div>
+                    </div>
+                    <!--展示登陆者信息模块到此结束-->
+
+                    <!--增强用户体验模块，展示日期，欢迎词-->
+                    <div class="mdui-card-media">
+                        <!--背景图片早，中晚不同-->
+                        <img src="img/card-background.jpg"/>
+                        <!--文字展示-->
+                        <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <!--问候词-->
+                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
+                                <!--日期-->
+                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--增强体验模块到此结束-->
+
+                    <!--公告模块-->
+                    <div class="mdui-card-primary">
+                        <!--公告标题-->
+                        <div class="mdui-card-primary-title">
+                            公告标题&nbsp;
+                            <a href="oldnotice.html">
+                                <div class="mdui-btn mdui-text-color-black">历史公告</div>
+                            </a>
+                        </div>
+                        <!--公告发布日期-->
+                        <div class="mdui-card-primary-subtitle">本公告由【管理员】发布于X年X月X日</div>
+                    </div>
+
+                    <!--公告内容信息-->
+                    <div class="mdui-card-content">
+                        <p>本次申报截止至A年B月C日，请各位同学抓紧时间填写申报信息，过期将不予补申报！</p>
+                        <!--空白一行，美观-->
+                        <br/>
+                    </div>
+
+                    <!--公告模块到此结束-->
+                </div>
+            </div>
+            <!--信息展示模块到此结束-->
+
+            <div class="mdui-col-sm-8 mdui-col-md-8">
+                <div class="mdui-container">
+                    <div class="mdui-typo">
+                        <h1>请输入下面的信息</h1>
+                        <p>为确保安全性，两项都需要正确输入才能进行删除。</p>
+                    </div>
+                    <div class="mdui-row-md-2">
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入姓名</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="mdui-col">
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">请输入用户ID</label>
+                                <input class="mdui-textfield-input" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="class-add-del">
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!--信息展示模块-->
+            <div class="mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-card">
+                    <!--展示登陆者信息-->
+                    <div class="mdui-card-header">
+                        <!--展示照片-->
+                        <img class="mdui-card-header-avatar" src="img/user.jpg"/>
+                        <!--展示姓名-->
+                        <div class="mdui-card-header-title">管理员</div>
+                        <!--展示学号-->
+                        <div class="mdui-card-header-subtitle">UserID</div>
+                    </div>
+                    <!--展示登陆者信息模块到此结束-->
+
+                    <!--增强用户体验模块，展示日期，欢迎词-->
+                    <div class="mdui-card-media">
+                        <!--背景图片早，中晚不同-->
+                        <img src="img/card-background.jpg"/>
+                        <!--文字展示-->
+                        <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <!--问候词-->
+                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
+                                <!--日期-->
+                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--增强体验模块到此结束-->
+
+                    <!--公告模块-->
+                    <div class="mdui-card-primary">
+                        <!--公告标题-->
+                        <div class="mdui-card-primary-title">
+                            公告标题&nbsp;
+                            <a href="oldnotice.html">
+                                <div class="mdui-btn mdui-text-color-black">历史公告</div>
+                            </a>
+                        </div>
+                        <!--公告发布日期-->
+                        <div class="mdui-card-primary-subtitle">本公告由【管理员】发布于X年X月X日</div>
+                    </div>
+
+                    <!--公告内容信息-->
+                    <div class="mdui-card-content">
+                        <p>本次申报截止至A年B月C日，请各位同学抓紧时间填写申报信息，过期将不予补申报！</p>
+                        <!--空白一行，美观-->
+                        <br/>
+                    </div>
+
+                    <!--公告模块到此结束-->
+                </div>
+            </div>
+            <!--信息展示模块到此结束-->
+
+            <div class="mdui-col-sm-8 mdui-col-md-8">
+                <div class="mdui-container">
+                    <div class="mdui-typo">
+                        <h1>现存状态</h1>
+                    </div>
+                    <div class="mdui-panel mdui-panel-popout" mdui-panel>
+                        <!--多层嵌套，注意查询权限-->
+                        <div class="mdui-panel" mdui-panel>
+                            <div class="mdui-panel-item">
+                                <div class="mdui-panel-item-header">
+                                    <div class="mdui-panel-item-title">xx学院</div>
+                                    <div class="mdui-panel-item-summary">总班级数：20</div>
+                                    <div class="mdui-panel-item-summary">总人数：400</div>
+                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                </div>
+                                <div class="mdui-panel-item-body">
+                                    <!--多层嵌套，注意查询权限-->
+                                    <div class="mdui-panel" mdui-panel>
+                                        <div class="mdui-panel-item">
+                                            <div class="mdui-panel-item-header">
+                                                <div class="mdui-panel-item-title">xx班级</div>
+                                                <div class="mdui-panel-item-summary">总人数：30人</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--多层嵌套，注意查询权限-->
+                                    <div class="mdui-panel" mdui-panel>
+                                        <div class="mdui-panel-item">
+                                            <div class="mdui-panel-item-header">
+                                                <div class="mdui-panel-item-title">xx班级</div>
+                                                <div class="mdui-panel-item-summary">总人数：30人</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--多层嵌套，注意查询权限-->
+                        <div class="mdui-panel" mdui-panel>
+                            <div class="mdui-panel-item">
+                                <div class="mdui-panel-item-header">
+                                    <div class="mdui-panel-item-title">xx学院</div>
+                                    <div class="mdui-panel-item-summary">总班级数：20</div>
+                                    <div class="mdui-panel-item-summary">总人数：400</div>
+                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                </div>
+                                <div class="mdui-panel-item-body">
+                                    <!--多层嵌套，注意查询权限-->
+                                    <div class="mdui-panel" mdui-panel>
+                                        <div class="mdui-panel-item">
+                                            <div class="mdui-panel-item-header">
+                                                <div class="mdui-panel-item-title">xx班级</div>
+                                                <div class="mdui-panel-item-summary">总人数：30人</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--多层嵌套，注意查询权限-->
+                                    <div class="mdui-panel" mdui-panel>
+                                        <div class="mdui-panel-item">
+                                            <div class="mdui-panel-item-header">
+                                                <div class="mdui-panel-item-title">xx班级</div>
+                                                <div class="mdui-panel-item-summary">总人数：30人</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--多层嵌套，注意查询权限-->
+                        <div class="mdui-panel" mdui-panel>
+                            <div class="mdui-panel-item">
+                                <div class="mdui-panel-item-header">
+                                    <div class="mdui-panel-item-title">xx学院</div>
+                                    <div class="mdui-panel-item-summary">总班级数：20</div>
+                                    <div class="mdui-panel-item-summary">总人数：400</div>
+                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                </div>
+                                <div class="mdui-panel-item-body">
+                                    <!--多层嵌套，注意查询权限-->
+                                    <div class="mdui-panel" mdui-panel>
+                                        <div class="mdui-panel-item">
+                                            <div class="mdui-panel-item-header">
+                                                <div class="mdui-panel-item-title">xx班级</div>
+                                                <div class="mdui-panel-item-summary">总人数：30人</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--多层嵌套，注意查询权限-->
+                                    <div class="mdui-panel" mdui-panel>
+                                        <div class="mdui-panel-item">
+                                            <div class="mdui-panel-item-header">
+                                                <div class="mdui-panel-item-title">xx班级</div>
+                                                <div class="mdui-panel-item-summary">总人数：30人</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--多层嵌套，注意查询权限-->
+                        <div class="mdui-panel" mdui-panel>
+                            <div class="mdui-panel-item">
+                                <div class="mdui-panel-item-header">
+                                    <div class="mdui-panel-item-title">xx学院</div>
+                                    <div class="mdui-panel-item-summary">总班级数：20</div>
+                                    <div class="mdui-panel-item-summary">总人数：400</div>
+                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                </div>
+                                <div class="mdui-panel-item-body">
+                                    <!--多层嵌套，注意查询权限-->
+                                    <div class="mdui-panel" mdui-panel>
+                                        <div class="mdui-panel-item">
+                                            <div class="mdui-panel-item-header">
+                                                <div class="mdui-panel-item-title">xx班级</div>
+                                                <div class="mdui-panel-item-summary">总人数：30人</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--多层嵌套，注意查询权限-->
+                                    <div class="mdui-panel" mdui-panel>
+                                        <div class="mdui-panel-item">
+                                            <div class="mdui-panel-item-header">
+                                                <div class="mdui-panel-item-title">xx班级</div>
+                                                <div class="mdui-panel-item-summary">总人数：30人</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mdui-typo">
+                        <h1>新增班级</h1>
+                        <h5>选择学院</h5>
+                    </div>
+                    <select class="mdui-select" mdui-select>
+                        <option value="1">学院1</option>
+                        <option value="2">学院2</option>
+                        <option value="3">学院3</option>
+                        <option value="4">学院4</option>
+                    </select>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">输入班号</label>
+                        <input class="mdui-textfield-input" type="text"/>
+                    </div>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">新增</button>
+
+                    <div class="mdui-typo">
+                        <h1>新增学院</h1>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">输入学院名</label>
+                        <input class="mdui-textfield-input" type="text"/>
+                    </div>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">新增</button>
+                    <br/><br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--用户中心-->
+<div id="user">
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!--信息展示模块-->
+            <div class="mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-card">
+                    <!--展示登陆者信息-->
+                    <div class="mdui-card-header">
+                        <!--展示照片-->
+                        <img class="mdui-card-header-avatar" src="img/user.jpg"/>
+                        <!--展示姓名-->
+                        <div class="mdui-card-header-title">管理员</div>
+                        <!--展示学号-->
+                        <div class="mdui-card-header-subtitle">UserID</div>
+                    </div>
+                    <!--展示登陆者信息模块到此结束-->
+
+                    <!--增强用户体验模块，展示日期，欢迎词-->
+                    <div class="mdui-card-media">
+                        <!--背景图片早，中晚不同-->
+                        <img src="img/card-background.jpg"/>
+                        <!--文字展示-->
+                        <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <!--问候词-->
+                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
+                                <!--日期-->
+                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--增强体验模块到此结束-->
+
+                    <!--公告模块-->
+                    <div class="mdui-card-primary">
+                        <!--公告标题-->
+                        <div class="mdui-card-primary-title">
+                            公告标题&nbsp;
+                            <a href="oldnotice.html">
+                                <div class="mdui-btn mdui-text-color-black">历史公告</div>
+                            </a>
+                        </div>
+                        <!--公告发布日期-->
+                        <div class="mdui-card-primary-subtitle">本公告由【管理员】发布于X年X月X日</div>
+                    </div>
+                    <!--公告内容信息-->
+                    <div class="mdui-card-content">
+                        <p>本次申报截止至A年B月C日，请各位同学抓紧时间填写申报信息，过期将不予补申报！</p>
+                        <!--空白一行，美观-->
+                        <br/>
+                    </div>
+                    <!--公告模块到此结束-->
+
+                </div>
+            </div>
+            <!--信息展示模块到此结束-->
+            <div class="mdui-col-sm-8 mdui-col-md-8">
+                <div class="mdui-container">
+                    <div class="mdui-typo">
+                        <h2>重置密码</h2>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">原密码</label>
+                        <input class="mdui-textfield-input" type="OldPasswd"/>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">新密码</label>
+                        <input class="mdui-textfield-input" type="NewPasswd"
+                               pattern="^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z]).*$" required/>
+                        <div class="mdui-textfield-error">密码至少 8 位，且包含大小写字母</div>
+                        <div class="mdui-textfield-helper">请输入至少 8 位，且包含大小写字母的密码</div>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">确认新密码</label>
+                        <input class="mdui-textfield-input" type="NewPasswd2"/>
+                    </div>
+                    <button class="mdui-btn mdui-color-pink mdui-ripple">提交</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--底部信息栏-->
+<div class="mdui-bottom-nav-fixed">
+    <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-indigo">
+        <div class="mdui-container">
+            <div class="bottom-text-center mdui-text-center">
+                xx大学奖学金申报系统
+                <br/>地址：X省Y市Z区A路
+                <br/>联系电话：0123456789
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/mdui.min.js"></script>
+</body>
+</html>

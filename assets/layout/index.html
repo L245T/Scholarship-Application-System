@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>登录 | 奖学金申报系统</title>
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="mdui-container login-mdui-container">
+    <div class="mdui-row">
+        <div class="login-box">
+            <div class="login-title mdui-color-blue-900 mdui-text-color-white">
+                登录
+            </div>
+
+            <!--登录表单-->
+            <div class="mdui-container login-form-box">
+                <div class="mdui-textfield mdui-textfield-floating-label login-textfield">
+                    <i class="mdui-icon material-icons">account_circle</i>
+                    <label class="mdui-textfield-label">请输入用户名</label>
+                    <input class="mdui-textfield-input" type="username"/>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label login-textfield">
+                    <i class="mdui-icon material-icons">lock</i>
+                    <label class="mdui-textfield-label">请输入密码</label>
+                    <input class="mdui-textfield-input" type="password">
+                </div>
+            </div>
+            <div class="mdui-text-center">
+                <div class="login-response">
+                    <div class="mdui-typo-body-2 ">
+                        <!--failed
+                        <p class="mdui-text-color-red"><strong>账户或密码错误！请重新输入！</strong></p>
+                        -->
+                        <!--success
+                        <p class="mdui-text-color-green"><strong>登陆成功！正在进入系统！</strong></p>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <!--提交按钮-->
+            <div class="mdui-container login-footer">
+                <div class="mdui-row-xs-2">
+                    <div class="mdui-col">
+                        <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-color-green-200 mdui-ripple">
+                            登录
+                        </button>
+                    </div>
+                    <div class="mdui-col">
+                        <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-color-amber-500 mdui-ripple"
+                                mdui-dialog="{target: '#reset-password'}">
+                            忘记密码
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-row-md-3">
+                <div class="mdui-col">
+                    <a href="student.html" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">测试入口申报端</a>
+                </div>
+                <div class="mdui-col">
+                    <a href="auditor.html" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">测试入口审核端</a>
+                </div>
+                <div class="mdui-col">
+                    <a href="admin.html" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">测试入口管理端</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--忘记密码弹窗-->
+<div class="mdui-dialog login-dialog" id="reset-password">
+    <div class="login-box login-dialog-box">
+        <div class="login-title login-dialog-title mdui-color-amber mdui-text-color-blue-50">
+            忘记密码？
+        </div>
+        <!--表单-->
+        <div class="mdui-container login-dialog-box">
+            <div class="mdui-textfield mdui-textfield-floating-label login-textfield login-dialog-textfield">
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">请输入用户名</label>
+                    <input class="mdui-textfield-input" type="username"/>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">请输入姓名</label>
+                    <input class="mdui-textfield-input" type="username"/>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">请输入身份证号码</label>
+                    <input class="mdui-textfield-input" type="username"/>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">请输入新的密码</label>
+                    <input class="mdui-textfield-input" type="password">
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">请再次新的密码</label>
+                    <input class="mdui-textfield-input" type="password">
+                </div>
+            </div>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>提交</button>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="js/mdui.min.js"></script>
+</body>
+</html>

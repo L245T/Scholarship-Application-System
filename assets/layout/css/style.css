@@ -1,0 +1,86 @@
+.login-mdui-container {
+    width: 96%;
+    max-width: 400px;
+}
+
+@media (min-width: 450px) {
+    .login-mdui-container {
+        width: 96%;
+    }
+}
+
+@media (min-width: 500px) {
+    .login-mdui-container {
+        width: 96%;
+    }
+}
+
+.login-box {
+    position: relative;
+    max-width: 400px;
+    margin-top: 10%;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    overflow: hidden;
+}
+
+.login-title {
+    padding: 110px 0 30px 40px;
+    box-sizing: border-box;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+
+.login-form-box {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.login-textfield {
+    margin-left: 18px;
+    margin-right: 24px;
+    padding-top: 28px;
+}
+
+.login-response {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-footer {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 0 15% 0 15%;
+}
+
+.login-dialog {
+    max-width: 400px;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    overflow: hidden;
+}
+
+.login-dialog-box {
+    margin-top: 0;
+}
+
+.login-dialog-title {
+    padding: 60px 0 10px 40px;
+}
+
+.login-dialog-box-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.login-dialog-textfield {
+    padding-top: 5px;
+}
+
+.bottom-text-center {
+    margin-top: 4px;
+}

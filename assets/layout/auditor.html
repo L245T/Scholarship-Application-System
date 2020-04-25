@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>审批端 | 奖学金申报系统</title>
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--头信息&工具栏-->
+<div class="mdui-appbar">
+    <div class="mdui-toolbar mdui-color-blue-900">
+        <a href="auditor.html" class="mdui-typo-headline">xx大学</a>
+        <a href="auditor.html" class="mdui-typo-title">审批端</a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--登出按钮-->
+        <a href="logout.html" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink">退出登录</a>
+    </div>
+    <!--工具栏-->
+    <div class="mdui-tab mdui-tab-centered mdui-color-blue-900" mdui-tab>
+        <a href="#audit" class="mdui-ripple mdui-ripple-white">申报审批</a>
+        <a href="#auditor-query" class="mdui-ripple mdui-ripple-white">审批查询</a>
+        <a href="#user" class="mdui-ripple mdui-ripple-white">个人中心</a>
+    </div>
+</div>
+
+<!--留白2行-->
+<br/><br/>
+
+<!--审批页面-->
+<div id="audit">
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!--信息展示模块-->
+            <div class="mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-card">
+                    <!--展示登陆者信息-->
+                    <div class="mdui-card-header">
+                        <!--展示照片-->
+                        <img class="mdui-card-header-avatar" src="img/user.jpg"/>
+                        <!--展示姓名-->
+                        <div class="mdui-card-header-title">审核员</div>
+                        <!--展示学号-->
+                        <div class="mdui-card-header-subtitle">UserID</div>
+                    </div>
+                    <!--展示登陆者信息模块到此结束-->
+
+                    <!--增强用户体验模块，展示日期，欢迎词-->
+                    <div class="mdui-card-media">
+                        <!--背景图片早，中晚不同-->
+                        <img src="img/card-background.jpg"/>
+                        <!--文字展示-->
+                        <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <!--问候词-->
+                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
+                                <!--日期-->
+                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--增强体验模块到此结束-->
+
+                    <!--公告模块-->
+                    <div class="mdui-card-primary">
+                        <!--公告标题-->
+                        <div class="mdui-card-primary-title">
+                            公告标题&nbsp;
+                            <a href="oldnotice.html">
+                                <div class="mdui-btn mdui-text-color-black">历史公告</div>
+                            </a>
+                        </div>
+                        <!--公告发布日期-->
+                        <div class="mdui-card-primary-subtitle">本公告由【管理员】发布于X年X月X日</div>
+                    </div>
+
+                    <!--公告内容信息-->
+                    <div class="mdui-card-content">
+                        <p>本次申报截止至A年B月C日，请各位同学抓紧时间填写申报信息，过期将不予补申报！</p>
+                        <!--空白一行，美观-->
+                        <br/>
+                    </div>
+
+                    <!--公告模块到此结束-->
+                </div>
+            </div>
+            <!--信息展示模块到此结束-->
+
+            <div class="mdui-col-sm-8 mdui-col-md-8">
+                <div class="mdui-container">
+                    <div class="mdui-typo">
+                        <h1>审批状态</h1>
+                        <div class="mdui-chip mdui-color-red-400">
+                            <span class="mdui-chip-title">n条未审批</span>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="mdui-chip mdui-color-green-300">
+                            <span class="mdui-chip-title">m条已审批</span>
+                        </div>
+                    </div>
+
+                    <div class="mdui-typo">
+                        <h1>未审批</h1>
+                    </div>
+                    <div class="mdui-table-fluid">
+                        <table class="mdui-table">
+                            <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>学号</th>
+                                <th>学院</th>
+                                <th>平均绩点</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>李四</td>
+                                <td>男</td>
+                                <td>2018100001234</td>
+                                <td>计算机学院</td>
+                                <td>3.7</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="mdui-table-fluid">
+                        <table class="mdui-table">
+                            <thead>
+                            <tr>
+                                <th>所申请奖学金类型</th>
+                            </tr>
+                            <tr>
+                                <td>李四光奖学金</td>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="mdui-textfield">
+                        <label class="mdui-textfield-label">所填写申报原因</label>
+                        <textarea class="mdui-textfield-input" type="text" maxlength="800"
+                                  disabled>申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因
+                        </textarea>
+                    </div>
+                    <div class="mdui-typo">
+                        <h3>审批结果</h3>
+                    </div>
+                    <form>
+                        <label class="mdui-radio">
+                            <input type="radio" name="group1"/>
+                            <i class="mdui-radio-icon"></i>
+                            通过
+                        </label>
+                        <br/>
+                        <label class="mdui-radio">
+                            <input type="radio" name="group1"/>
+                            <i class="mdui-radio-icon"></i>
+                            不通过
+                        </label>
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <label class="mdui-textfield-label">审批意见</label>
+                            <textarea class="mdui-textfield-input" maxlength="50"></textarea>
+                        </div>
+                    </form>
+                    <br/>
+                    <button class="mdui-btn mdui-color-pink mdui-ripple">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--查询页面-->
+<div id="auditor-query">
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!--信息展示模块-->
+            <div class="mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-card">
+                    <!--展示登陆者信息-->
+                    <div class="mdui-card-header">
+                        <!--展示照片-->
+                        <img class="mdui-card-header-avatar" src="img/user.jpg"/>
+                        <!--展示姓名-->
+                        <div class="mdui-card-header-title">审核员</div>
+                        <!--展示学号-->
+                        <div class="mdui-card-header-subtitle">UserID</div>
+                    </div>
+                    <!--展示登陆者信息模块到此结束-->
+
+                    <!--增强用户体验模块，展示日期，欢迎词-->
+                    <div class="mdui-card-media">
+                        <!--背景图片早，中晚不同-->
+                        <img src="img/card-background.jpg"/>
+                        <!--文字展示-->
+                        <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <!--问候词-->
+                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
+                                <!--日期-->
+                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--增强体验模块到此结束-->
+
+                    <!--公告模块-->
+                    <div class="mdui-card-primary">
+                        <!--公告标题-->
+                        <div class="mdui-card-primary-title">
+                            公告标题&nbsp;
+                            <a href="oldnotice.html">
+                                <div class="mdui-btn mdui-text-color-black">历史公告</div>
+                            </a>
+                        </div>
+                        <!--公告发布日期-->
+                        <div class="mdui-card-primary-subtitle">本公告由【管理员】发布于X年X月X日</div>
+                    </div>
+                    <!--公告内容信息-->
+                    <div class="mdui-card-content">
+                        <p>本次申报截止至A年B月C日，请各位同学抓紧时间填写申报信息，过期将不予补申报！</p>
+                        <!--空白一行，美观-->
+                        <br/>
+                    </div>
+                    <!--公告模块到此结束-->
+
+                </div>
+            </div>
+            <!--信息展示模块到此结束-->
+
+            <div class="mdui-col-sm-8 mdui-col-md-8">
+                <div class="mdui-container">
+                    <div class="mdui-typo">
+                        <h1>本班/院/校整体审批情况</h1>
+                    </div>
+                    <div class="mdui-table-fluid">
+                        <table class="mdui-table">
+                            <thead>
+                            <tr>
+                                <th>总申请数</th>
+                                <th>班级审批通过</th>
+                                <th>学院审批通过</th>
+                                <th>学校审批通过</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>200</td>
+                                <td>190</td>
+                                <td>50</td>
+                                <td>45</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <a href="all-status.html">
+                        <div class="mdui-btn mdui-color-grey-200 mdui-text-color-black">详细状态</div>
+                    </a>
+                    <div class="mdui-typo">
+                        <h1>单用户查询</h1>
+                    </div>
+                    <div class="mdui-typo-caption">
+                        <p class="mdui-text-color-grey-600">请选择学年</p>
+                    </div>
+                    <select class="mdui-select" mdui-select>
+                        <option value="20201">2020年春学期</option>
+                        <option value="20192">2019年秋学期</option>
+                        <option value="20191">2019年春学期</option>
+                        <option value="20182">2018年秋学期</option>
+                    </select>
+                    <div class="mdui-textfield  mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">姓名</label>
+                        <input class="mdui-textfield-input" type="text"/>
+                    </div>
+                    <button class="mdui-btn mdui-color-pink mdui-ripple">查询</button>
+                    <br/><br/>
+                    <div class="mdui-table-fluid">
+                        <table class="mdui-table">
+                            <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>学号</th>
+                                <th>学院</th>
+                                <th>平均绩点</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>李四</td>
+                                <td>男</td>
+                                <td>2018100001234</td>
+                                <td>计算机学院</td>
+                                <td>3.7</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="mdui-table-fluid">
+                        <table class="mdui-table">
+                            <thead>
+                            <tr>
+                                <th>所申请奖学金类型</th>
+                            </tr>
+                            <tr>
+                                <td>李四光奖学金</td>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="mdui-textfield">
+                        <label class="mdui-textfield-label">所填写申报原因</label>
+                        <textarea class="mdui-textfield-input" type="text" maxlength="800"
+                                  disabled>申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因申报原因
+                        </textarea>
+                    </div>
+                    <div class="mdui-table-fluid">
+                        <table class="mdui-table">
+                            <thead>
+                            <tr>
+                                <th>审批级别</th>
+                                <th>审批结果</th>
+                                <th>审批意见</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>班级</td>
+                                <td class="mdui-text-color-green">通过</td>
+                                <td class="mdui-text-color-green">无</td>
+                            </tr>
+                            <tr>
+                                <td>学院</td>
+                                <td class="mdui-text-color-red">不通过</td>
+                                <td class="mdui-text-color-red">不够详细</td>
+                            </tr>
+                            <tr>
+                                <td>学校</td>
+                                <td class="mdui-text-color-grey">/</td>
+                                <td class="mdui-text-color-grey">/</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--用户中心-->
+<div id="user">
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <!--信息展示模块-->
+            <div class="mdui-col-sm-6 mdui-col-md-4">
+                <div class="mdui-card">
+                    <!--展示登陆者信息-->
+                    <div class="mdui-card-header">
+                        <!--展示照片-->
+                        <img class="mdui-card-header-avatar" src="img/user.jpg"/>
+                        <!--展示姓名-->
+                        <div class="mdui-card-header-title">审核员</div>
+                        <!--展示学号-->
+                        <div class="mdui-card-header-subtitle">UserID</div>
+                    </div>
+                    <!--展示登陆者信息模块到此结束-->
+
+                    <!--增强用户体验模块，展示日期，欢迎词-->
+                    <div class="mdui-card-media">
+                        <!--背景图片早，中晚不同-->
+                        <img src="img/card-background.jpg"/>
+                        <!--文字展示-->
+                        <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <!--问候词-->
+                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
+                                <!--日期-->
+                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--增强体验模块到此结束-->
+
+                    <!--公告模块-->
+                    <div class="mdui-card-primary">
+                        <!--公告标题-->
+                        <div class="mdui-card-primary-title">
+                            公告标题&nbsp;
+                            <a href="oldnotice.html">
+                                <div class="mdui-btn mdui-text-color-black">历史公告</div>
+                            </a>
+                        </div>
+                        <!--公告发布日期-->
+                        <div class="mdui-card-primary-subtitle">本公告由【管理员】发布于X年X月X日</div>
+                    </div>
+                    <!--公告内容信息-->
+                    <div class="mdui-card-content">
+                        <p>本次申报截止至A年B月C日，请各位同学抓紧时间填写申报信息，过期将不予补申报！</p>
+                        <!--空白一行，美观-->
+                        <br/>
+                    </div>
+                    <!--公告模块到此结束-->
+
+                </div>
+            </div>
+            <!--信息展示模块到此结束-->
+
+            <div class="mdui-col-sm-8 mdui-col-md-8">
+                <div class="mdui-container">
+                    <div class="mdui-typo">
+                        <h2>重置密码</h2>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">原密码</label>
+                        <input class="mdui-textfield-input" type="OldPasswd"/>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">新密码</label>
+                        <input class="mdui-textfield-input" type="NewPasswd"
+                               pattern="^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z]).*$" required/>
+                        <div class="mdui-textfield-error">密码至少 8 位，且包含大小写字母</div>
+                        <div class="mdui-textfield-helper">请输入至少 8 位，且包含大小写字母的密码</div>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">确认新密码</label>
+                        <input class="mdui-textfield-input" type="NewPasswd2"/>
+                    </div>
+                    <button class="mdui-btn mdui-color-pink mdui-ripple">提交</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--底部信息栏-->
+<div class="mdui-bottom-nav-fixed">
+    <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-indigo">
+        <div class="mdui-container">
+            <div class="bottom-text-center mdui-text-center">
+                xx大学奖学金申报系统
+                <br/>地址：X省Y市Z区A路
+                <br/>联系电话：0123456789
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/mdui.min.js"></script>
+</body>
+</html>
