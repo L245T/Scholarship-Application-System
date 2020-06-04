@@ -53,10 +53,14 @@
                         <!--文字展示-->
                         <div class="mdui-card-media-covered">
                             <div class="mdui-card-primary">
-                                <!--问候词-->
-                                <div class="mdui-card-primary-title">早上好/中午好/晚上好</div>
                                 <!--日期-->
-                                <div class="mdui-card-primary-subtitle">今天是X年Y月Z日</div>
+                                <div class="mdui-card-primary-subtitle">
+                                    <div id="show_time0" style="">
+                                        <script>
+                                            setInterval("show_time0.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+                                        </script>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,27 +93,31 @@
 
             <!--申报填写模块-->
             <div class="mdui-col-sm-8 mdui-col-md-8">
-                <div class="mdui-container">
-                    <div class="mdui-typo">
-                        <h1>奖学金申报填写</h1>
-                    </div>
-                    <div class="mdui-typo-caption">
-                        <p class="mdui-text-color-grey-600">请选择奖学金种类</p>
-                    </div>
-                    <select class="mdui-select" mdui-select>
-                        <option value="1">国家奖学金</option>
-                        <option value="2">湖北省奖学金</option>
-                        <option value="3">这是一个名字长一点的奖学金样例</option>
-                        <option value="4">校级奖学金</option>
-                        <option value="5">国家助学金</option>
-                        <option value="6">李四光奖学金</option>
-                        <option value="7"></option>
-                    </select>
-                    <div class="mdui-textfield mdui-textfield-floating-label">
-                        <label class="mdui-textfield-label">请填写申报原因</label>
-                        <textarea class="mdui-textfield-input" type="text" maxlength="800"></textarea>
-                    </div>
-                    <button class="mdui-btn mdui-color-pink mdui-ripple">提交</button>
+                <div  method="post">
+                    <form method="post">
+                        <div class="mdui-typo">
+                            <h1>奖学金申报填写</h1>
+                        </div>
+                        <div class="mdui-typo-caption">
+                            <p class="mdui-text-color-grey-600">请选择奖学金种类</p>
+                        </div>
+                        <select class="mdui-select" mdui-select name="select">
+                            <option value="1">国家奖学金</option>
+                            <option value="2">湖北省奖学金</option>
+                            <option value="3">这是一个名字长一点的奖学金样例</option>
+                            <option value="4">校级奖学金</option>
+                            <option value="5">国家助学金</option>
+                            <option value="6">李四光奖学金</option>
+                            <option value="7"></option>
+                        </select>
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <label class="mdui-textfield-label">请填写申报原因</label>
+                            <textarea class="mdui-textfield-input" type="text" maxlength="800" name="apply_reason"></textarea>
+                        </div>
+                        <button type="submit" class="mdui-btn mdui-color-pink mdui-ripple" value="submit" name="submit">提交</button>
+                    </form>>
+
+
                 </div>
             </div>
         </div>
